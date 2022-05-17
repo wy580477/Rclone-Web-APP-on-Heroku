@@ -34,7 +34,9 @@ handle_path {$GLOBAL_PORTAL_PATH}/rclonerc/* {
         reverse_proxy * localhost:61802
 }
 # Configure Rclone Serve Webdav
-handle_path {$GLOBAL_PORTAL_PATH}/rclonedav/* {
+handle {$GLOBAL_PORTAL_PATH}/rclonedav* {
+        redir {$GLOBAL_PORTAL_PATH}/rclonedav {$GLOBAL_PORTAL_PATH}/rclonedav/
+        uri strip_prefix {$GLOBAL_PORTAL_PATH}/rclonedav
         reverse_proxy * localhost:61801
 }
 # Configure Filebrowser
