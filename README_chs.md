@@ -62,7 +62,7 @@
 ### 初次使用
 
  1. 部署完成后，比如你的heroku域名是bobby.herokuapp.com，导航页路径是/portal，访问bobby.herokuapp.com/portal 即可到达导航页。
- 2. Webdav地址： heroku域名/${GLOBAL_PORTAL_PATH}/rclonedav
+ 2. Webdav地址： Heroku_app域名/${GLOBAL_PORTAL_PATH}/rclonedav
 
 ### 更多用法和注意事项
 
