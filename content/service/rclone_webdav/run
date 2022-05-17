@@ -1,0 +1,19 @@
+#!/bin/sh
+
+DRIVE_NAME_AUTO="$(sed -n '1p' /mnt/data/config/rclone.conf | sed "s/\[//g" | sed "s/\]//g")"
+if [ "${RCLONE_WEBDAV_PATH}" = "auto" ]; then
+    WEBDAV_PATH="${DRIVE_NAME_AUTO}:/"
+else
+    WEBDAV_PATH=${RCLONE_WEBDAV_PATH}
+fi
+
+# Run rclone
+htpasswd -csb /workdir/htpasswd_webdav ${GLOBAL_USER} ${GLOBAL_PASSWORD}
+exec 2>&1
+exec rclone serve webdav ${WEBDAV_PATH} \
+--htpasswd=/workdir/htpasswd_webdav \
+--addr=localhost:61801 \
+--buffer-size 4M \
+--config /mnt/data/config/rclone.conf \
+--use-mmap \
+--vfs-cache-mode writes 
