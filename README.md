@@ -1,5 +1,10 @@
 [点击前往中文说明](https://github.com/wy580477/Rclone-Web-APP-on-Heroku/blob/main/README_chs.md)
 
+## Warning | 警告
+ 2022/5/21
+ - Unmaintained repo，Heroku likely would ban any repo with Rclone upload traffic now.
+ - 停止维护，Heroku现在可能封禁所有有rclone上传流量的dyno。
+
 ## Acknowledgments
 
 - [bastienwirtz/homer](https://github.com/bastienwirtz/homer)  A very simple static homepage for your server.
