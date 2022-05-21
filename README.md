@@ -2,8 +2,8 @@
 
 ## Warning | 警告
  2022/5/21
- - Unmaintained repo，Heroku likely would ban any repo with Rclone upload traffic now.
- - 停止维护，Heroku现在可能封禁所有有rclone上传流量的dyno。
+ - Unmaintained repo，deploy at your own risk.
+ - 停止维护，部署风险自负。
 
 ## Acknowledgments
 
